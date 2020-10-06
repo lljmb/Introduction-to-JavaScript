@@ -22,6 +22,7 @@ const votingAge = 17
 
 if(votingAge >= 18){
   console.log(true);
+  return true
 }
 
 console.log(votingAge)
@@ -135,6 +136,29 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
+
+
+  let choice2 = Math.random();
+  if (choice2 < 0.34){
+    choice2 = 'rock'
+  } else if (choice2 > 0.67){
+    choice2 = 'paper'
+  } else {
+    choice2 = 'scissors'
+  }
+
+  function game(choice) {
+  if (choice === choice2){
+    console.log('its a tie!');
+  } else if (choice === 'paper' && choice2 === 'rock' || choice === 'scissors' && choice2 === 'paper' || choice === 'rock' && choice2 === 'scissors'){
+    console.log('you win!')
+  } else {
+    console.log('you lose!')
+  }
+  }
+
+  return game('paper')
+  return game('rock')
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
