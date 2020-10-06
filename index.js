@@ -18,6 +18,13 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 17
+
+if(votingAge >= 18){
+  console.log(true);
+}
+
+console.log(votingAge)
 
 
 /*
@@ -33,8 +40,6 @@ Do the following:
 
 
 
-
-
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -46,7 +51,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let num = 1999
+let n = num.toString();
 
 
 /*
@@ -58,11 +64,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
-
+console.log(multiply(5,4))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,9 +80,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7
 }
+
+console.log(dogYears(2));
 
 
 
@@ -107,8 +115,8 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    return 
   }
 
 
@@ -127,10 +135,6 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
-}
-  
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -174,10 +178,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+let number = 5
 
+function annoyingSong(number){
+  for (let i = 0; i < number.length; i++) {
+  console.log(`${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`)
+  }
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -194,10 +201,21 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
-  }
-  
+function grade(score){
+
+  if (score >= 90) {
+    return "A";
+} else if (score >= 80) {
+    return "B";
+} else if (score >= 70) {
+    return "C";
+} else if (score >= 60) {
+    return "D";
+} else {
+    return "F";
+}
+
+}
   
   
   
