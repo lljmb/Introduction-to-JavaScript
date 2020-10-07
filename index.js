@@ -149,7 +149,7 @@ Use the game function below to do the following:
 
 function game(){
   let compChoice = Math.random();
-  let choice = "";
+  let userChoice = "";
   
   if (compChoice < 0.34){
     compChoice = 'paper'
@@ -159,8 +159,8 @@ function game(){
     compChoice = 'scissors'
   }
   
-  if (choice === 'rock' && compChoice === 'scissors' || choice === 'paper' && compChoice === 'rock' || choice === 'scissors' && compChoice === 'paper'){   console.log("you win!");
-  } else if (compChoice === 'rock' && choice === 'scissors' || compChoice === 'paper' && choice === 'rock' || compChoice === 'scissors' && choice === 'paper') { 
+  if (userChoice === 'rock' && compChoice === 'scissors' || userChoice === 'paper' && compChoice === 'rock' || userChoice === 'scissors' && compChoice === 'paper'){   console.log("you win!");
+  } else if (compChoice === 'rock' && userChoice === 'scissors' || compChoice === 'paper' && userChoice === 'rock' || compChoice === 'scissors' && userChoice === 'paper') { 
     console.log("you lose!")
   } else {
     console.log(`it's a tie`)
@@ -236,15 +236,15 @@ Using the grade function below do the following:
 function grade(score){
 
   if (score >= 90) {
-    return "A";
+    return "you got an A";
 } else if (score >= 80) {
-    return "B";
+    return "you got a B";
 } else if (score >= 70) {
-    return "C";
+    return "you got a C";
 } else if (score >= 60) {
-    return "D";
+    return "you got a D";
 } else {
-    return "F";
+    return "you got an F";
 }
 
 }
