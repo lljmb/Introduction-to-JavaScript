@@ -22,7 +22,6 @@ const votingAge = 17
 
 if(votingAge >= 18){
   console.log(true);
-  return true
 }
 
 console.log(votingAge)
@@ -38,6 +37,10 @@ Do the following:
 
    HINT: no function required
 */
+
+const x = 1 
+const y = 2
+
 
 
 
@@ -117,7 +120,13 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age){
-    return 
+   if (weight >= 5 && age >= 1){
+     return (weight * .05)
+   }
+   if (weight > 15 && age >= 1){
+     return (weight * .2)
+   }
+  
   }
 
 
@@ -138,27 +147,26 @@ Use the game function below to do the following:
 
 
 
-  let choice2 = Math.random();
-  if (choice2 < 0.34){
-    choice2 = 'rock'
-  } else if (choice2 > 0.67){
-    choice2 = 'paper'
+function game(){
+  let compChoice = Math.random();
+  let choice = "";
+  
+  if (compChoice < 0.34){
+    compChoice = 'paper'
+  } else if (compChoice > 0.67){
+    compChoice = 'rock'
   } else {
-    choice2 = 'scissors'
+    compChoice = 'scissors'
   }
-
-  function game(choice) {
-  if (choice === choice2){
-    console.log('its a tie!');
-  } else if (choice === 'paper' && choice2 === 'rock' || choice === 'scissors' && choice2 === 'paper' || choice === 'rock' && choice2 === 'scissors'){
-    console.log('you win!')
+  
+  if (choice === 'rock' && compChoice === 'scissors' || choice === 'paper' && compChoice === 'rock' || choice === 'scissors' && compChoice === 'paper'){   console.log("you win!");
+  } else if (compChoice === 'rock' && choice === 'scissors' || compChoice === 'paper' && choice === 'rock' || compChoice === 'scissors' && choice === 'paper') { 
+    console.log("you lose!")
   } else {
-    console.log('you lose!')
+    console.log(`it's a tie`)
   }
-  }
-
-  return game('paper')
-  return game('rock')
+  
+}
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
